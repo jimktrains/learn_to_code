@@ -24,3 +24,6 @@ with open('grades.csv') as grades_file:
 # over the students and compute and then print the average for each
 for student_name in student_test_count:
     print(student_name, student_test_total[student_name] / student_test_count[student_name])
+
+# Your teach now wants both the average and the letter grade.  Modify the 
+# program above to print the student's name, average, and letter grade.
