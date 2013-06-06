@@ -1,0 +1,6 @@
+[submodule "skulpt"]
+	path = skulpt
+	url = https://github.com/bnmnetp/skulpt.git
+[submodule "codemirror"]
+	path = codemirror
+	url = https://github.com/marijnh/CodeMirror.git

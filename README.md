@@ -1,6 +1,6 @@
 I came across the book 'Elementary Pascal," (http://books.google.com/books/about/Elementary_PASCAL_as_chronicled_by_John.html?id=SLkxH9QRvCwC) (http://www.amazon.com/Elementary-Learning-Program-Computer-Sherlock/dp/B002T6VZJI) in which the authors use Sherlock Holmes stories to teach children Pascal by writing Pascal programs to solve mysteries.
 
-I felt that a modern-day equivalent would be nice, so this is my attempt to write a book where the child works through various programs and problems to learn the concepts of programming via Python 3.
+I felt that a modern-day equivalent would be nice, so this is my attempt to write a book where the child works through various programs and problems to learn the concepts of programming via Python 2. (Python 3 would be ideal, but Skulpt only supports 2.x)
 
 Ideally each chapter would be a puzzle, riddle, or mystery to solve and build upon what has been written in the chapters before it. The first chapter, I envisioned, would work the reader up from reading then to editing existing and finally to writing new code.
 

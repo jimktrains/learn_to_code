@@ -1,0 +1,121 @@
+<html>
+<head>
+<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+<style>
+    .code-block .output-container {
+        float: left;
+        border-left: solid 1px black;
+        padding-left: 5px;
+        height: 350px;
+    }
+    .code-block .output-container pre {
+        width: 400;
+        height: 300px;
+        overflow: scroll;
+    }
+    .code-block .code-container {
+        width: 600px;
+        float: left;
+        height: 350px;
+    }
+    .code-block .code-container .CodeMirror {
+        width: 600px;
+    }
+    .code-block {
+        clear: both;
+        width: 100%;
+        height: 350px;
+    }
+</style>
+<script src="jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="skulpt/dist/skulpt.js" type="text/javascript"></script>
+<script src="codemirror/lib/codemirror.js" type="text/javascript"></script>
+<script src="codemirror/mode/python/python.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    editor = {};
+    $('.run').each(function(){
+        code_id = "#" + $(this).data('code');
+        editor[$(this).data('code')] = CodeMirror.fromTextArea($(code_id)[0], {
+            lineNumbers: true,
+            textWrapping: false,
+            indentUnit: 4,
+            autoMatchParens: true,
+            parserConfig: {'pythonVersion': 3, 'strictErrors': true}
+        });
+    });
+
+    $(".run").click(function(){
+        output = $(this).data('code') + "-output";
+        output = $('#' + output);
+        ed = editor[$(this).data('code')];
+        output.text('');
+        var outf = function(text) { output.text(output.text() + text); };
+        ed.save();
+        Sk.configure({output:outf});
+        code = $('#' + $(this).data('code')).val();
+        eval(Sk.importMainWithBody("<stdin>", false, code));
+    });
+});
+</script>
+</head>
+<body>
+<p>You are the captain of the StarShip Python.</p>
+
+<p>Your officers tell you that another ship is approaching! Quick! turn on the shields by assigning the variable <tt>shields_on</tt> the value <tt>True</tt></p>
+
+<div class="code-block">
+    <div class="code-container">
+        <p>Code <button class='run' data-code="code1">Run!</button></p>
+        <textarea id="code1">shields_on = False
+if shields_on:
+    print "The shields are on! We're safe!" 
+else:
+    print "The shields are off! You better hope those aliens are friendly!" </textarea>
+    </div>
+    <div class="output-container">
+        <p>Output</p>
+        <pre class="output" id="code1-output"></pre>
+    </div>
+</div>
+
+<p>Oh no! The aliens are firing on us!  We need to hit them 100 times to stop their weapons! Our normal weapons only fires 4 times, can you make it fire 100 times?</p>
+
+<div class="code-block">
+    <div class="code-container">
+        <p>Code <button class='run' data-code="code2">Run!</button></p>
+        <textarea id="code2">for i in range(1, 5):
+    print 'fire', i
+</textarea>
+    </div>
+    <div class="output-container">
+        <p>Output</p>
+        <pre class="output" id="code2-output"></pre>
+    </div>
+</div>
+
+<p>The aliens have stopped shooting at us! Good Job!</p>
+
+<p>Your officers tell you that they're receiving a message from the aliens.  You need to use the decode function to read it.</p>
+
+<div class="code-block">
+    <div class="code-container">
+        <p>Code <button class='run' data-code="code3">Run!</button></p>
+        <textarea id="code3">def decode(message):
+    length = len(message)
+    decoded = ""
+    for i in range(0, length):
+        decoded += message[length - i - 1]
+    return decoded
+
+message = "!taht tuoba yrros er'eW"
+print decode("elpmaxE")
+</textarea>
+    </div>
+    <div class="output-container">
+        <p>Output</p>
+        <pre class="output" id="code3-output"></pre>
+    </div>
+</div>
+</body>
+</html>
