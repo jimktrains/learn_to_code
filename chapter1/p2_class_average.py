@@ -33,6 +33,9 @@ with open('grades.csv') as grades_file:
                 # Each time we see a test, we do two things:
                 # * Increment the count of tests by one
                 # * Add the test score to the total of all the tests
+                #   When read from a file, the score is stored as text
+                #   and not as a number.  To convert the text to a number
+                #   we can use the int() function.
                 test_count += 1
                 test_total += int(student_tests[test])
 
