@@ -4,4 +4,4 @@ I felt that a modern-day equivalent would be nice, so this is my attempt to writ
 
 Right now, this is a work in progress.  Critiques, pull-requests, and ideas would be greatly welcomed.
 
-The contents of the book are licenced under the Creative Commons Share Alike (CC-SA) (http://creativecommons.org/licenses/by-sa/2.0/) license.
+The contents of the book are licenced under the Creative Commons Attribution-Share Alike (CC-SA) (http://creativecommons.org/licenses/by-sa/2.0/) license.
