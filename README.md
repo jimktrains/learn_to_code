@@ -2,7 +2,7 @@ I came across the book 'Elementary Pascal," (http://books.google.com/books/about
 
 I felt that a modern-day equivalent would be nice, so this is my attempt to write a book where the child works through various programs and problems to learn the concepts of programming via Python 3.
 
-Ideally each chapter would be a puzzle, riddle, or mystery to solve and build upon what has been written in the chapters before it.
+Ideally each chapter would be a puzzle, riddle, or mystery to solve and build upon what has been written in the chapters before it. The first chapter, I envisioned, would work the reader up from reading then to editing existing and finally to writing new code.
 
 Right now, this is a work in progress.  Critiques, pull-requests, and ideas would be greatly welcomed. Please add your name, and optionally a website, to list of authors in the AUTHORS file.
 
